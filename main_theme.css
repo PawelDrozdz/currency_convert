@@ -1,0 +1,26 @@
+body {
+    background-color: #053C05;
+	color: #4fad4f;
+	text-align: center;
+	font-family: sans-serif;
+}
+
+h1.title {
+	font-family: fantasy;
+}
+
+div.background {
+	background-color: #116611;
+	padding: 15px 15px 15px 15px;
+	border-radius: 10px;
+}
+
+#converter{
+	color: #314706;
+	background-color: #7b9f35;
+	padding: 15px 15px 15px 15px;
+	border-radius: 10px;
+	width: 50%;
+	margin: 0 auto;
+}
+
