@@ -1,11 +1,9 @@
 function convertCurrency(amount) {
+	//get the value from the form
 	var amountValue = document.getElementById(amount).value;
+	//inform the user that something is indeed happening
+	document.getElementById("convertedCurrency").innerHTML = "Connecting to the server, please wait...";
 	
-	if (amount=="") {
-        document.getElementById("convertedCurrency").innerHTML="Something went wrong";
-    return;
-	}
-  
     if (window.XMLHttpRequest) {
         // code for IE7+, Firefox, Chrome, Opera, Safari
         var xhttp = new XMLHttpRequest();
@@ -17,10 +15,17 @@ function convertCurrency(amount) {
 	
     xhttp.onreadystatechange = function() {
         if (xhttp.readyState == 4 && xhttp.status == 200) {
-		    document.getElementById("convertedCurrency").innerHTML = amountValue + " RUB = " + xhttp.responseText + " PLN";
+			//if the server can't be reached, inform the user
+			if (xhttp.responseText == "Failed"){
+			document.getElementById("convertedCurrency").innerHTML = "Could not reach the server. Try again.";
+			}
+			else {
+			//compose a decently formatted answer, if amountValue was empty, conversion for 1 RUB was received
+		    document.getElementById("convertedCurrency").innerHTML = xhttp.responseText;
+			}
         }
     };
  
     xhttp.open("GET", "convert.php?q=" +amountValue, true);
     xhttp.send();
-} 
+}
