@@ -1,5 +1,6 @@
 body {
     background-color: #567714;
+	color: #FFFFFF;
 	text-align: center;
 	font-family: sans-serif;
 }
@@ -9,15 +10,6 @@ div.background {
 	background-color: #7b9f35;
 	padding: 15px 15px 15px 15px;
 	border-radius: 10px;
-}
-
-#converter{
-	color: #314706;
-	background-color: #A5C662;
-	padding: 15px 15px 15px 15px;
-	border-radius: 10px;
-	width: 50%;
-	margin: 0 auto;
 }
 
 .button {
@@ -32,3 +24,13 @@ div.background {
 	font-weight:bold;
 	margin-top:20px;
 }
+
+#converter{
+	color: #314706;
+	background-color: #A5C662;
+	padding: 15px 15px 15px 15px;
+	border-radius: 10px;
+	width: 50%;
+	margin: 0 auto;
+}
+

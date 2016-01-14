@@ -20,7 +20,7 @@ function convertCurrency(amount) {
 			document.getElementById("convertedCurrency").innerHTML = "Could not reach the server. Try again.";
 			}
 			else {
-			//compose a decently formatted answer, if amountValue was empty, conversion for 1 RUB was received
+			//show the response from the server to the user
 		    document.getElementById("convertedCurrency").innerHTML = xhttp.responseText;
 			}
         }

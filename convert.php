@@ -7,7 +7,9 @@ if (!is_numeric($amount_to_convert)){
 	$amount_to_convert = 1;
 }
 
-/*attempt to pull JSON from fixer.io API, if no server response, die and send a message back to the script, using file_get_contents for simplicity and since it's allowed from the host, a more robust solution would be to use cURL*/
+/*attempt to pull JSON from fixer.io API, if no server response, die and send a message back to the script, 
+using file_get_contents for simplicity and since it's allowed from the host, 
+a more robust solution would be to use cURL*/
 if(FALSE !== ($content = @file_get_contents('http://api.fixer.io/latest?symbols=RUB,PLN'))) {
 	//convert JSON
     $conversion_data = json_decode($content, true);
@@ -18,11 +20,9 @@ if(FALSE !== ($content = @file_get_contents('http://api.fixer.io/latest?symbols=
     //calculate the converted amount in PLN
     $converted_amount = $amount_to_convert * $rub_to_pln_rate;
 	
-	//send formatted converted amount
+    //send formatted converted amount
     echo $amount_to_convert . " RUB = " . round($converted_amount, 4) . " PLN";
-}
-else {
-	//inform the script that connection to the server failed
+} else {
+    //inform the script that connection to the server failed
     die('Failed');
 }
-?>
