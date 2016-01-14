@@ -1,8 +1,15 @@
 <?php
-//use the value sent from the script, replace "," with "." for ease of use
+/*
+Paweł Drożdż
+PawelDrozdz_task\convert.php
+called from script.js, server side file responsible for validating sent data, 
+obtaining API data, converting the currency and sending back the value
+*/
+
+//use the value sent from the script, replace "," with "." to be able to use numbers with decimal comma
 $amount_to_convert = str_replace(",",".",$_REQUEST["q"]);
 	
-//simple validation to only allow usable numeric values
+//simple validation to only allow usable numeric values, else the script returns conversion for 1 RUB
 if (!is_numeric($amount_to_convert)){
 	$amount_to_convert = 1;
 }

@@ -1,3 +1,11 @@
+/*
+Paweł Drożdż
+PawelDrozdz_task\script.js
+script executes on clicking the button in index.php, takes whatever the user types in the form,
+handles presentation of data to the user, establishes connection to the server
+and sends and receives data to convert
+*/
+
 function convertCurrency(amount) {
 	//get the value from the form
 	var amountValue = document.getElementById(amount).value;
