@@ -7,9 +7,9 @@
     <script src="script.js"></script>
 </head>
 <body>  
-	<h1 class="title">Currency Converter</h1>
+	<h1>Currency Converter</h1>
     <div id="converter">
-		<h2 class="title">RUB-to-PLN Converter</h2>
+		<h2>RUB-to-PLN Converter</h2>
         <form>
             RUB amount: <input type="text" id="varRUB"><br>
         </form>
